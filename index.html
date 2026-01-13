@@ -915,8 +915,8 @@ const slides = [
               \\(
               \\begin{aligned}[t]
                 \\frac{3x}{7}+\\frac{2x}{7}
-                &= \\style{color: rgb(31,126,208)}{\\frac{3x+2x}{7}} \\\\
-                &= \\style{color: rgb(31,126,208)}{\\frac{5x}{7}}
+                &= \\frac{3x+2x}{7} \\\\
+                &= \\frac{5x}{7}
               \\end{aligned}
               \\)
             `
@@ -927,492 +927,486 @@ const slides = [
     `
   },
 
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Examples</h1>
-            <p>Simplify the following expressions.</p>
-          </section>
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Examples</h1>
+        <p>Simplify the following expressions.</p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{5x}{9}+\\frac{12x}{9}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{7a}{8}-\\frac{3a}{8}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{5x}{9}+\\frac{12x}{9}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{7a}{8}-\\frac{3a}{8}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
 
-      {
-        timer: { min: 1, sec: 0 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Question 1</h1>
-            <p><strong>On your whiteboards, simplify.</strong></p>
-          </section>
+  {
+    timer: { min: 1, sec: 0 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Question 1</h1>
+        <p><strong>On your whiteboards, simplify.</strong></p>
+      </section>
 
-          ${renderMiniWhiteboard([
-            { label: "a)", exprHtml: `\\(\\frac{4x}{5}+\\frac{3x}{5}\\)` },
-            { label: "b)", exprHtml: `\\(\\frac{9a}{7}+\\frac{2a}{7}\\)` },
-            { label: "c)", exprHtml: `\\(\\frac{11y}{6}-\\frac{5y}{6}\\)` },
-            { label: "d)", exprHtml: `\\(\\frac{8p}{9}-\\frac{3p}{9}\\)` }
-          ])}
-        `
-      },
+      ${renderMiniWhiteboard([
+        { label: "a)", exprHtml: `\\(\\frac{4x}{5}+\\frac{3x}{5}\\)` },
+        { label: "b)", exprHtml: `\\(\\frac{9a}{7}+\\frac{2a}{7}\\)` },
+        { label: "c)", exprHtml: `\\(\\frac{11y}{6}-\\frac{5y}{6}\\)` },
+        { label: "d)", exprHtml: `\\(\\frac{8p}{9}-\\frac{3p}{9}\\)` }
+      ])}
+    `
+  },
 
-      {
-        timer: null,
-        render: () => `
-          <section class="card">
-            <h1>Core Knowledge: Same Algebraic Denominator</h1>
-            <ul class="bullets">
-              <li>If denominators match, add/subtract numerators.</li>
-              <li>Keep the denominator unchanged.</li>
-              <li>Simplify the final fraction if possible.</li>
-            </ul>
-          </section>
+  {
+    timer: null,
+    render: () => `
+      <section class="card">
+        <h1>Core Knowledge: Same Algebraic Denominator</h1>
+        <ul class="bullets">
+          <li>If denominators match, add/subtract numerators.</li>
+          <li>Keep the denominator unchanged.</li>
+          <li>Simplify the final fraction if possible.</li>
+        </ul>
+      </section>
 
-          <section class="card example-card">
-            <h1>Example</h1>
-            <p>Simplify the following expression.</p>
-          </section>
+      <section class="card example-card">
+        <h1>Example</h1>
+        <p>Simplify the following expression.</p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              {
-                label: "a)",
-                mainHtml: `
-                  \\(
-                  \\begin{aligned}[t]
-                    \\frac{7}{2a}+\\frac{3x}{2a}
-                    &= \\color{#1f7ed0}{\\frac{7+3x}{2a}}
-                  \\end{aligned}
-                  \\)
-                `
-              },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 2 }
-          )}
-        `
-      },
+      ${renderRowQuestions(
+        [
+          {
+            label: "a)",
+            mainHtml: `
+              \\(
+              \\begin{aligned}[t]
+                \\frac{7}{2a}+\\frac{3x}{2a}
+                &= \\frac{7+3x}{2a}
+              \\end{aligned}
+              \\)
+            `
+          },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 2 }
+      )}
+    `
+  },
 
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Examples</h1>
-            <p>Simplify the following expressions.</p>
-          </section>
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Examples</h1>
+        <p>Simplify the following expressions.</p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{9}{4x}-\\frac{5}{4x}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{2y}{3a}+\\frac{7}{3a}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{9}{4x}-\\frac{5}{4x}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{2y}{3a}+\\frac{7}{3a}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
 
-      {
-        timer: { min: 1, sec: 0 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Question 2</h1>
-            <p><strong>On your whiteboards, simplify.</strong></p>
-          </section>
+  {
+    timer: { min: 1, sec: 0 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Question 2</h1>
+        <p><strong>On your whiteboards, simplify.</strong></p>
+      </section>
 
-          ${renderMiniWhiteboard([
-            { label: "a)", exprHtml: `\\(\\frac{6}{5x}+\\frac{4}{5x}\\)` },
-            { label: "b)", exprHtml: `\\(\\frac{11a}{7p}+\\frac{3}{7p}\\)` },
-            { label: "c)", exprHtml: `\\(\\frac{10}{9y}-\\frac{7}{9y}\\)` },
-            { label: "d)", exprHtml: `\\(\\frac{8x}{6a}-\\frac{2}{6a}\\)` }
-          ])}
-        `
-      },
+      ${renderMiniWhiteboard([
+        { label: "a)", exprHtml: `\\(\\frac{6}{5x}+\\frac{4}{5x}\\)` },
+        { label: "b)", exprHtml: `\\(\\frac{11a}{7p}+\\frac{3}{7p}\\)` },
+        { label: "c)", exprHtml: `\\(\\frac{10}{9y}-\\frac{7}{9y}\\)` },
+        { label: "d)", exprHtml: `\\(\\frac{8x}{6a}-\\frac{2}{6a}\\)` }
+      ])}
+    `
+  },
 
-      {
-        timer: null,
-        render: () => `
-        <div class="slide7-zoom">
-          <section class="card">
-            <h1>Core Knowledge: Different Denominators</h1>
-            <ul class="bullets">
-              <li>Rewrite with a common denominator.</li>
-              <li>Add/subtract the numerators.</li>
-              <li>Simplify the final answer fully.</li>
-            </ul>
-          </section>
+  {
+    timer: null,
+    render: () => `
+      <div class="slide7-zoom">
+        <section class="card">
+          <h1>Core Knowledge: Different Denominators</h1>
+          <ul class="bullets">
+            <li>Rewrite with a common denominator.</li>
+            <li>Add/subtract the numerators.</li>
+            <li>Simplify the final answer fully.</li>
+          </ul>
+        </section>
 
-          <section class="card example-card">
-            <h1>Example</h1>
-            <p>Simplify the following expression.</p>
-          </section>
+        <section class="card example-card">
+          <h1>Example</h1>
+          <p>Simplify the following expression.</p>
+        </section>
 
-          ${renderRowQuestions(
-            [
-              {
-                label: "a)",
-                mainHtml: `
-                  \\(
-                  \\begin{aligned}[t]
-                    \\frac{4a}{3}+\\frac{7a}{6}
-                    &= \\color{#1f7ed0}{\\frac{8a}{6}+\\frac{7a}{6}} \\\\
-                    &= \\color{#1f7ed0}{\\frac{15a}{6}} \\\\
-                    &= \\color{#1f7ed0}{\\frac{5a}{2}}
-                  \\end{aligned}
-                  \\)
-                `
-              },
-            ],
-            { forceCount: 1 }
-          )}
-          </div>
-        `
-      },
-
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Examples</h1>
-            <p>Simplify the following expressions.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{5x}{4}+\\frac{3x}{8}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{7a}{10}-\\frac{2a}{5}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
-
-      {
-        timer: { min: 1, sec: 0 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Question 3</h1>
-            <p><strong>On your whiteboards, simplify.</strong></p>
-          </section>
-
-          ${renderMiniWhiteboard([
-            { label: "a)", exprHtml: `\\(\\frac{3y}{2}+\\frac{y}{6}\\)` },
-            { label: "b)", exprHtml: `\\(\\frac{7x}{9}+\\frac{2x}{3}\\)` },
-            { label: "c)", exprHtml: `\\(\\frac{5a}{8}-\\frac{a}{4}\\)` },
-            { label: "d)", exprHtml: `\\(\\frac{11p}{6}-\\frac{p}{3}\\)` }
-          ])}
-        `
-      },
-
-      {
-        timer: null,
-        render: () => `
-          <section class="card">
-            <h1>Core Knowledge: Different Algebraic Denominators</h1>
-            <ul class="bullets">
-              <li>Find the lowest common denominator.</li>
-              <li>Rewrite each fraction with this denominator.</li>
-              <li>Simplify the final answer fully.</li>
-            </ul>
-          </section>
-
-          <section class="card example-card">
-            <h1>Example</h1>
-            <p>Simplify the following expression.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              {
-                label: "a)",
-                mainHtml: `
-                  \\(
-                  \\begin{aligned}[t]
-                    \\frac{3}{x}+\\frac{7}{2x}
-                    &= \\color{#1f7ed0}{\\frac{6}{2x}+\\frac{7}{2x}} \\\\
-                    &= \\color{#1f7ed0}{\\frac{13}{2x}}
-                  \\end{aligned}
-                  \\)
-                `
-              },
-
-            ],
-            { forceCount: 1 }
-          )}
-        `
-      },
-
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Examples</h1>
-            <p>Simplify the following expressions.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{5}{y}+\\frac{1}{2y}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{9}{4a}-\\frac{3}{2a}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
-
-      {
-        timer: { min: 1, sec: 0 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Question 4</h1>
-            <p><strong>On your whiteboards, simplify.</strong></p>
-          </section>
-
-          ${renderMiniWhiteboard([
-            { label: "a)", exprHtml: `\\(\\frac{7}{x}+\\frac{5}{3x}\\)` },
-            { label: "b)", exprHtml: `\\(\\frac{4}{5p}+\\frac{1}{p}\\)` },
-            { label: "c)", exprHtml: `\\(\\frac{11}{2y}-\\frac{3}{y}\\)` },
-            { label: "d)", exprHtml: `\\(\\frac{6}{a}-\\frac{1}{3a}\\)` }
-          ])}
-        `
-      },
-
-      {
-        timer: null,
-        render: () => `
-          <section class="card">
-            <h1>Core Knowledge: Unrelated Denominators</h1>
-            <ul class="bullets">
-              <li>Identify a common denominator.</li>
-              <li>Rewrite as equivalent fractions.</li>
-              <li>Cancel any common factors at the end.</li>
-            </ul>
-          </section>
-
-          <section class="card example-card">
-            <h1>Example</h1>
-            <p>Simplify the following expression.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              {
-                label: "a)",
-                mainHtml: `
-                  \\(
-                  \\begin{aligned}[t]
-                    \\frac{n}{5}+\\frac{2}{3p}
-                    &= \\color{#1f7ed0}{\\frac{3np}{15p}+\\frac{10}{15p}} \\\\
-                    &= \\color{#1f7ed0}{\\frac{3np+10}{15p}}
-                  \\end{aligned}
-                  \\)
-                `
-              },
-
-            ],
-            { forceCount: 1 }
-          )}
-        `
-      },
-
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Examples</h1>
-            <p>Simplify the following expressions.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{4x}{a}+\\frac{7}{x}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{9}{m}-\\frac{5}{n}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
-
-      {
-        timer: { min: 1, sec: 30 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Question 5</h1>
-            <p><strong>On your whiteboards, simplify.</strong></p>
-          </section>
-
-          ${renderMiniWhiteboard([
-            { label: "a)", exprHtml: `\\(\\frac{3}{x}+\\frac{5}{y}\\)` },
-            { label: "b)", exprHtml: `\\(\\frac{7a}{b}+\\frac{2}{a}\\)` },
-            { label: "c)", exprHtml: `\\(\\frac{11}{p}-\\frac{4}{q}\\)` },
-            { label: "d)", exprHtml: `\\(\\frac{6x}{y}-\\frac{y}{x}\\)` }
-          ])}
-        `
-      },
-
-      // --- NEW SLIDE 1: Core Knowledge (expand a single bracket, then simplify) ---
-      {
-        timer: null,
-        render: () => `
-          <section class="card">
-            <h1>Core Knowledge:</h1>
-              <p>Sometimes when simplifying algebraic fractions, we will have to expand a single bracket and simplify it.</p>
-          </section>
-
-          <section class="card example-card">
-            <h1>Worked Example</h1>
-            <p>Express the following as a single simplified fraction.</p>
-          </section>
-
-          ${renderRowQuestions(
-            [
-              {
-                label: "",
-                mainHtml: `
+        ${renderRowQuestions(
+          [
+            {
+              label: "a)",
+              mainHtml: `
                 \\(
                 \\begin{aligned}[t]
-                  \\frac{2}{x+5}+\\frac{3}{x+1}
-                  &= \\color{#1f7ed0}{\\frac{2(x+1)}{(x+5)(x+1)}+\\frac{3(x+5)}{(x+5)(x+1)}} \\\\[0.8em]
-                  &= \\color{#1f7ed0}{\\frac{2(x+1)+3(x+5)}{(x+5)(x+1)}} \\\\[0.8em]
-                  &= \\color{#1f7ed0}{\\frac{2x+2+3x+15}{(x+5)(x+1)}} \\\\[0.8em]
-                  &= \\color{#1f7ed0}{\\frac{5x+17}{(x+5)(x+1)}}
+                  \\frac{4a}{3}+\\frac{7a}{6}
+                  &= \\frac{8a}{6}+\\frac{7a}{6} \\\\
+                  &= \\frac{15a}{6} \\\\
+                  &= \\frac{5a}{2}
                 \\end{aligned}
                 \\)
-                `
-              }
-            ],
-            { forceCount: 1 }
-          )}
-        `
-      },
+              `
+            },
+          ],
+          { forceCount: 1 }
+        )}
+      </div>
+    `
+  },
 
-      // --- NEW SLIDE 2: Teacher Example (2 examples in two columns) ---
-      {
-        timer: null,
-        render: () => `
-          <section class="card example-card">
-            <h1>Teacher Example</h1>
-            <p>Express the following as a single simplified fraction.</p>
-          </section>
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Examples</h1>
+        <p>Simplify the following expressions.</p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{2}{x+5}+\\frac{1}{x+1}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{3}{x+2}+\\frac{4}{x+7}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{5x}{4}+\\frac{3x}{8}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{7a}{10}-\\frac{2a}{5}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
 
-      // --- NEW SLIDE 3: Mini Whiteboards (2 examples in two columns) ---
-      {
-        timer: { min: 1, sec: 30 },
-        render: () => `
-          <section class="card example-card">
-            <h1>Mini Whiteboards</h1>
-            <p><strong>On your whiteboards, express the following as a single simplified fraction.</strong></p>
-          </section>
+  {
+    timer: { min: 1, sec: 0 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Question 3</h1>
+        <p><strong>On your whiteboards, simplify.</strong></p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              { label: "a)", mainHtml: `\\(\\frac{5}{x+3}+\\frac{2}{x-1}\\)` },
-              { label: "", mainHtml: "", placeholder: true },
-              { label: "b)", mainHtml: `\\(\\frac{4}{x+1}-\\frac{3}{x+6}\\)` },
-              { label: "", mainHtml: "", placeholder: true }
-            ],
-            { forceCount: 4 }
-          )}
-        `
-      },
+      ${renderMiniWhiteboard([
+        { label: "a)", exprHtml: `\\(\\frac{3y}{2}+\\frac{y}{6}\\)` },
+        { label: "b)", exprHtml: `\\(\\frac{7x}{9}+\\frac{2x}{3}\\)` },
+        { label: "c)", exprHtml: `\\(\\frac{5a}{8}-\\frac{a}{4}\\)` },
+        { label: "d)", exprHtml: `\\(\\frac{11p}{6}-\\frac{p}{3}\\)` }
+      ])}
+    `
+  },
 
-        {
-        timer: { min: 20, sec: 0 },
-        render: () => `
-            <div class="slide16-zoom">
-            <section class="review-slide">
-            <div class="review-title">📝 Core Knowledge Review - Write in your books:</div>
+  {
+    timer: null,
+    render: () => `
+      <section class="card">
+        <h1>Core Knowledge: Different Algebraic Denominators</h1>
+        <ul class="bullets">
+          <li>Find the lowest common denominator.</li>
+          <li>Rewrite each fraction with this denominator.</li>
+          <li>Simplify the final answer fully.</li>
+        </ul>
+      </section>
 
-            <div class="review-box">
-                <strong>Adding or Subtracting Algebraic Fractions with the Same Denominator</strong><br>
-                To add or subtract algebraic fractions with the same denominator, simply add or subtract the numerators. Remember to cancel out common factors.
-                <div class="review-example" style="display:flex; gap:18px; justify-content:space-between; font-size:22px;">
-                <div style="flex:1; text-align:center;">
-                    \\(
-                    \\begin{aligned}
-                        \\frac{2x}{6}+\\frac{x}{6} &= \\frac{3x}{6} \\\\
-                                                &= \\frac{x}{2}
-                    \\end{aligned}
-                    \\)
-                </div>
-                <div style="flex:1; text-align:center;">
-                    \\(
-                    \\begin{aligned}
-                        \\frac{3}{2a}+\\frac{8}{2a} &= \\frac{11}{2a}
-                    \\end{aligned}
-                    \\)
-                </div>
-                </div>
+      <section class="card example-card">
+        <h1>Example</h1>
+        <p>Simplify the following expression.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          {
+            label: "a)",
+            mainHtml: `
+              \\(
+              \\begin{aligned}[t]
+                \\frac{3}{x}+\\frac{7}{2x}
+                &= \\frac{6}{2x}+\\frac{7}{2x} \\\\
+                &= \\frac{13}{2x}
+              \\end{aligned}
+              \\)
+            `
+          },
+        ],
+        { forceCount: 1 }
+      )}
+    `
+  },
+
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Examples</h1>
+        <p>Simplify the following expressions.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{5}{y}+\\frac{1}{2y}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{9}{4a}-\\frac{3}{2a}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
+
+  {
+    timer: { min: 1, sec: 0 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Question 4</h1>
+        <p><strong>On your whiteboards, simplify.</strong></p>
+      </section>
+
+      ${renderMiniWhiteboard([
+        { label: "a)", exprHtml: `\\(\\frac{7}{x}+\\frac{5}{3x}\\)` },
+        { label: "b)", exprHtml: `\\(\\frac{4}{5p}+\\frac{1}{p}\\)` },
+        { label: "c)", exprHtml: `\\(\\frac{11}{2y}-\\frac{3}{y}\\)` },
+        { label: "d)", exprHtml: `\\(\\frac{6}{a}-\\frac{1}{3a}\\)` }
+      ])}
+    `
+  },
+
+  {
+    timer: null,
+    render: () => `
+      <section class="card">
+        <h1>Core Knowledge: Unrelated Denominators</h1>
+        <ul class="bullets">
+          <li>Identify a common denominator.</li>
+          <li>Rewrite as equivalent fractions.</li>
+          <li>Cancel any common factors at the end.</li>
+        </ul>
+      </section>
+
+      <section class="card example-card">
+        <h1>Example</h1>
+        <p>Simplify the following expression.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          {
+            label: "a)",
+            mainHtml: `
+              \\(
+              \\begin{aligned}[t]
+                \\frac{n}{5}+\\frac{2}{3p}
+                &= \\frac{3np}{15p}+\\frac{10}{15p} \\\\
+                &= \\frac{3np+10}{15p}
+              \\end{aligned}
+              \\)
+            `
+          },
+        ],
+        { forceCount: 1 }
+      )}
+    `
+  },
+
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Examples</h1>
+        <p>Simplify the following expressions.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{4x}{a}+\\frac{7}{x}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{9}{m}-\\frac{5}{n}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
+
+  {
+    timer: { min: 1, sec: 30 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Question 5</h1>
+        <p><strong>On your whiteboards, simplify.</strong></p>
+      </section>
+
+      ${renderMiniWhiteboard([
+        { label: "a)", exprHtml: `\\(\\frac{3}{x}+\\frac{5}{y}\\)` },
+        { label: "b)", exprHtml: `\\(\\frac{7a}{b}+\\frac{2}{a}\\)` },
+        { label: "c)", exprHtml: `\\(\\frac{11}{p}-\\frac{4}{q}\\)` },
+        { label: "d)", exprHtml: `\\(\\frac{6x}{y}-\\frac{y}{x}\\)` }
+      ])}
+    `
+  },
+
+  {
+    timer: null,
+    render: () => `
+      <section class="card">
+        <h1>Core Knowledge:</h1>
+        <p>Sometimes when simplifying algebraic fractions, we will have to expand a single bracket and simplify it.</p>
+      </section>
+
+      <section class="card example-card">
+        <h1>Worked Example</h1>
+        <p>Express the following as a single simplified fraction.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          {
+            label: "",
+            mainHtml: `
+              \\(
+              \\begin{aligned}[t]
+                \\frac{2}{x+5}+\\frac{3}{x+1}
+                &= \\frac{2(x+1)}{(x+5)(x+1)}+\\frac{3(x+5)}{(x+5)(x+1)} \\\\[0.8em]
+                &= \\frac{2(x+1)+3(x+5)}{(x+5)(x+1)} \\\\[0.8em]
+                &= \\frac{2x+2+3x+15}{(x+5)(x+1)} \\\\[0.8em]
+                &= \\frac{5x+17}{(x+5)(x+1)}
+              \\end{aligned}
+              \\)
+            `
+          }
+        ],
+        { forceCount: 1 }
+      )}
+    `
+  },
+
+  {
+    timer: null,
+    render: () => `
+      <section class="card example-card">
+        <h1>Teacher Example</h1>
+        <p>Express the following as a single simplified fraction.</p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{2}{x+5}+\\frac{1}{x+1}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{3}{x+2}+\\frac{4}{x+7}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
+
+  {
+    timer: { min: 1, sec: 30 },
+    render: () => `
+      <section class="card example-card">
+        <h1>Mini Whiteboards</h1>
+        <p><strong>On your whiteboards, express the following as a single simplified fraction.</strong></p>
+      </section>
+
+      ${renderRowQuestions(
+        [
+          { label: "a)", mainHtml: `\\(\\frac{5}{x+3}+\\frac{2}{x-1}\\)` },
+          { label: "", mainHtml: "", placeholder: true },
+          { label: "b)", mainHtml: `\\(\\frac{4}{x+1}-\\frac{3}{x+6}\\)` },
+          { label: "", mainHtml: "", placeholder: true }
+        ],
+        { forceCount: 4 }
+      )}
+    `
+  },
+
+  {
+    timer: { min: 20, sec: 0 },
+    render: () => `
+      <div class="slide16-zoom">
+        <section class="review-slide">
+          <div class="review-title">📝 Core Knowledge Review - Write in your books:</div>
+
+          <div class="review-box">
+            <strong>Adding or Subtracting Algebraic Fractions with the Same Denominator</strong><br>
+            To add or subtract algebraic fractions with the same denominator, simply add or subtract the numerators. Remember to cancel out common factors.
+            <div class="review-example" style="display:flex; gap:18px; justify-content:space-between; font-size:22px;">
+              <div style="flex:1; text-align:center;">
+                \\(
+                \\begin{aligned}
+                  \\frac{2x}{6}+\\frac{x}{6} &= \\frac{3x}{6} \\\\
+                                          &= \\frac{x}{2}
+                \\end{aligned}
+                \\)
+              </div>
+              <div style="flex:1; text-align:center;">
+                \\(
+                \\begin{aligned}
+                  \\frac{3}{2a}+\\frac{8}{2a} &= \\frac{11}{2a}
+                \\end{aligned}
+                \\)
+              </div>
             </div>
+          </div>
 
-            <div class="review-box">
-                <strong>Adding or Subtracting Algebraic Fractions with Different Denominators</strong><br>
-                To add or subtract algebraic fractions with different denominators, simply change the fractions into equivalent fractions, and then add or subtract the numerators.
-                <div class="review-example" style="display:flex; gap:14px; justify-content:space-between; font-size:20px;">
-                <div style="flex:1; text-align:center;">
-                    \\(
-                    \\begin{aligned}
-                        \\frac{3x}{5}+\\frac{7x}{12} &= \\frac{36x}{60}+\\frac{35x}{60} \\\\
-                                                    &= \\frac{71x}{60}
-                    \\end{aligned}
-                    \\)
-                </div>
-                <div style="flex:1; text-align:center;">
-                    \\(
-                    \\begin{aligned}
-                        \\frac{7}{a}-\\frac{3}{2a} &= \\frac{14}{2a}-\\frac{3}{2a} \\\\
-                                                &= \\frac{11}{2a}
-                    \\end{aligned}
-                    \\)
-                </div>
-                <div style="flex:1; text-align:center;">
-                    \\(
-                    \\begin{aligned}
-                        \\frac{3}{x}+\\frac{5}{y} &= \\frac{3y}{xy}+\\frac{5x}{xy} \\\\
-                                                &= \\frac{3y+5x}{xy}
-                    \\end{aligned}
-                    \\)
-                </div>
-                </div>
+          <div class="review-box">
+            <strong>Adding or Subtracting Algebraic Fractions with Different Denominators</strong><br>
+            To add or subtract algebraic fractions with different denominators, simply change the fractions into equivalent fractions, and then add or subtract the numerators.
+            <div class="review-example" style="display:flex; gap:14px; justify-content:space-between; font-size:20px;">
+              <div style="flex:1; text-align:center;">
+                \\(
+                \\begin{aligned}
+                  \\frac{3x}{5}+\\frac{7x}{12} &= \\frac{36x}{60}+\\frac{35x}{60} \\\\
+                                              &= \\frac{71x}{60}
+                \\end{aligned}
+                \\)
+              </div>
+              <div style="flex:1; text-align:center;">
+                \\(
+                \\begin{aligned}
+                  \\frac{7}{a}-\\frac{3}{2a} &= \\frac{14}{2a}-\\frac{3}{2a} \\\\
+                                            &= \\frac{11}{2a}
+                \\end{aligned}
+                \\)
+              </div>
+              <div style="flex:1; text-align:center;">
+                \\(
+                \\begin{aligned}
+                  \\frac{3}{x}+\\frac{5}{y} &= \\frac{3y}{xy}+\\frac{5x}{xy} \\\\
+                                          &= \\frac{3y+5x}{xy}
+                \\end{aligned}
+                \\)
+              </div>
             </div>
+          </div>
 
-            <div class="apply-task">
-                <h2>Independent Apply Task</h2>
-                <p>Complete all questions on the worksheet, showing all working clearly.</p>
-            </div>
-            </section>
-            </div>
-        `
-        }
-
-    ];
+          <div class="apply-task">
+            <h2>Independent Apply Task</h2>
+            <p>Complete all questions on the worksheet, showing all working clearly.</p>
+          </div>
+        </section>
+      </div>
+    `
+  }
+];
 
     /* ============================================================
       SLIDE NAVIGATION STATE
@@ -1887,5 +1881,6 @@ const slides = [
   </script>
 </body>
 </html>
+
 
 
