@@ -889,44 +889,43 @@
       - The timer widget is global; it is only shown when slide.timer is set.
       - Per-slide drawings are saved based on the slide index.
     ============================================================ */
-    const slides = [
-      {
-        timer: null,
-        render: () => `
-          <section class="card">
-            <h1>Core Knowledge: Same Denominator</h1>
-            <ul class="bullets">
-              <li>Add/subtract the numerators.</li>
-              <li>Keep the denominator unchanged.</li>
-              <li>Simplify by cancelling common factors.</li>
-            </ul>
-          </section>
+const slides = [
+  {
+    timer: null,
+    render: () => `
+      <section class="card">
+        <h1>Core Knowledge: Same Denominator</h1>
+        <ul class="bullets">
+          <li>Add/subtract the numerators.</li>
+          <li>Keep the denominator unchanged.</li>
+          <li>Simplify by cancelling common factors.</li>
+        </ul>
+      </section>
 
-          <section class="card example-card">
-            <h1>Example</h1>
-            <p>Simplify the following expression.</p>
-          </section>
+      <section class="card example-card">
+        <h1>Example</h1>
+        <p>Simplify the following expression.</p>
+      </section>
 
-          ${renderRowQuestions(
-            [
-              {
-                label: "a)",
-                mainHtml: `
-                  \\(
-                  \\begin{aligned}[t]
-                    \\frac{3x}{7}+\\frac{2x}{7}
-                    &= \\color{#1f7ed0}{\\frac{3x+2x}{7}} \\\\
-                    &= \\color{#1f7ed0}{\\frac{5x}{7}}
-                  \\end{aligned}
-                  \\)
-                `
-              },
-
-            ],
-            { forceCount: 1 }
-          )}
-        `
-      },
+      ${renderRowQuestions(
+        [
+          {
+            label: "a)",
+            mainHtml: `
+              \\(
+              \\begin{aligned}[t]
+                \\frac{3x}{7}+\\frac{2x}{7}
+                &= \\color[RGB]{31,126,208}{\\frac{3x+2x}{7}} \\\\
+                &= \\color[RGB]{31,126,208}{\\frac{5x}{7}}
+              \\end{aligned}
+              \\)
+            `
+          },
+        ],
+        { forceCount: 1 }
+      )}
+    `
+  },
 
       {
         timer: null,
@@ -1888,3 +1887,4 @@
   </script>
 </body>
 </html>
+
